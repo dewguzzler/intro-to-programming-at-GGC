@@ -1,0 +1,117 @@
+import java.awt.*;
+/*
+*Creating a square with a turtle inside a world
+* 
+* @author: Jesse Perkins
+* @date: 28 Jan 2012
+* @course: itec 2120
+* @instructor knagel
+* 
+*/
+
+public class TryTurtles
+{
+  static void drawSquare(Turtle turtle1, int width)
+  {
+    turtle1.turnRight();
+    turtle1.forward(width);
+    turtle1.turnRight();
+    turtle1.forward(width);
+    turtle1.turnRight();
+    turtle1.forward(width);
+    turtle1.turnRight();
+    turtle1.forward(width);
+  }
+  
+
+  static void drawYear(Turtle yTurtle)
+  {
+    yTurtle.turnRight();
+    yTurtle.forward(40);
+    yTurtle.turnRight();
+    yTurtle.forward(20);
+    yTurtle.turnRight();
+    yTurtle.forward(40);
+    yTurtle.turnLeft();
+    yTurtle.forward(20);
+    yTurtle.turnLeft();
+    yTurtle.forward(80);
+    yTurtle.turnLeft();
+    yTurtle.forward(40);
+    yTurtle.turnLeft();
+    yTurtle.forward(30);
+    yTurtle.turnLeft();
+    yTurtle.forward(40);
+    yTurtle.turnLeft();
+    yTurtle.forward(60);
+    yTurtle.turnLeft();
+    yTurtle.forward(40);
+    yTurtle.turnLeft();
+    yTurtle.forward(15);
+    yTurtle.turnRight();
+    yTurtle.turnRight();
+    yTurtle.forward(15);
+    yTurtle.turnRight();
+    yTurtle.forward(40);
+    yTurtle.turnLeft();
+    yTurtle.forward(60);
+    yTurtle.turnLeft();
+    yTurtle.turnLeft();
+    yTurtle.forward(40);
+    yTurtle.turnRight();
+    yTurtle.forward(20);
+    yTurtle.turnRight();
+    yTurtle.forward(40);
+    yTurtle.turnLeft();
+    yTurtle.forward(20);
+    yTurtle.turnLeft();
+    yTurtle.forward(40);
+    yTurtle.turnRight();
+    yTurtle.forward(5);
+    yTurtle.turnLeft();
+    yTurtle.setPenColor(java.awt.Color.MAGENTA);
+    yTurtle.forward(20);
+    yTurtle.turnRight();
+    yTurtle.forward(7);
+    yTurtle.turnRight();
+    yTurtle.turnRight();
+    yTurtle.forward(7);
+    yTurtle.turnLeft();
+    yTurtle.forward(20);
+    yTurtle.turnLeft();
+    yTurtle.forward(40);
+    yTurtle.turnLeft();
+    yTurtle.forward(20);
+    yTurtle.turnLeft();
+    yTurtle.turnLeft();
+    yTurtle.forward(45);
+    yTurtle.setPenColor(java.awt.Color.GREEN);
+    yTurtle.forward(20);
+    yTurtle.turnLeft();
+    yTurtle.forward(20);
+    yTurtle.turnLeft();
+    yTurtle.forward(20);
+    yTurtle.turnLeft();
+    yTurtle.forward(50);
+    yTurtle.setBodyColor(java.awt.Color.BLACK);
+  }
+    
+    
+  public static void main(String[] args)
+  {
+    World newWorld;
+    
+    Turtle myTurtle;
+    Turtle yTurtle;
+    
+    newWorld = new World();
+    
+    myTurtle = new Turtle(newWorld);
+    yTurtle = new Turtle(400,400,newWorld);
+    myTurtle.setPenWidth(5);
+    yTurtle.setPenWidth(4);
+    
+    drawSquare(myTurtle, 80);
+    drawYear(yTurtle);
+  }
+}
